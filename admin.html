@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard - FASHION</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">FASHION</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="orders.html">Orders</a>
+      <a href="admin.html" class="active">Admin</a>
+    </nav>
+  </header>
+
+  <!-- ADMIN LOGIN PAGE -->
+  <section id="adminLogin" class="admin-login">
+    <h2>👑 Admin Login</h2>
+    <form id="adminLoginForm">
+      <label>Username</label>
+      <input type="text" id="adminUser" placeholder="Enter Username" required>
+
+      <label>Password</label>
+      <input type="password" id="adminPass" placeholder="Enter Password" required>
+
+      <button type="submit">Login</button>
+      <p id="loginError" class="error-text"></p>
+    </form>
+  </section>
+
+  <!-- ADMIN DASHBOARD -->
+  < section id="adminDashboard" class="admin-dashboard" style="display:none;">
+    <div class="dashboard-header">
+      <h2>📊 Admin Dashboard</h2>
+      <button id="logoutBtn" class="logout-btn">Logout</button>
+    </div>
+
+    <div class="admin-summary">
+      <div class="summary-card">
+        <h3>Total Orders</h3>
+        <p id="totalOrders">0</p>
+      </div>
+      <div class="summary-card">
+        <h3>Total Products Sold</h3>
+        <p id="totalProducts">0</p>
+      </div>
+      <div class="summary-card">
+        <h3>Total Revenue</h3>
+        <p id="totalRevenue">₹0</p>
+      </div>
+    </div>
+
+    < h3 style="margin-top: 40px;">🧾 Order Details</h3>
+    <div class="admin-orders-list"></div>
+  </section>
+
+  <footer>
+    <p>© 2025 FASHION | Admin Panel</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Cart - FASHION</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">FASHION</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="cart.html" class="active">Cart</a>
+      <a href="orders.html">Orders</a>
+      <a href="admin.html">Admin</a>
+    </nav>
+  </header>
+
+  <section class="cart-page">
+    <h2>Your Shopping Cart</h2>
+    <div class="cart-items"></div>
+    <div class="total">
+      <h3>Total: <span class="total-price">₹0</span></h3>
+      <button id="checkoutBtn">Checkout</button>
+    </div>
+  </section>
+
+  <!-- Checkout Popup -->
+  <div id="checkoutPopup" class="checkout-popup">
+    <div class="checkout-box">
+      <h2>Checkout</h2>
+      <form id="checkoutForm">
+        <label>Full Name</label>
+        < input type="text" id="custName" required>
+
+        <label>Address</label>
+        < textarea id="custAddress" rows="3" required></textarea>
+
+        <label>Payment Method</label>
+        < select id="paymentMethod" required>
+          <option value="COD">Cash on Delivery</option>
+          <option value="Card">Credit / Debit Card</option>
+          <option value="UPI">UPI</option>
+        </select>
+
+        <div class="checkout-buttons">
+          <button type="submit" class="confirm-btn">Confirm Order</button>
+          <button type="button" id="closePopup" class="cancel-btn">Cancel</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2025 FASHION | All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
