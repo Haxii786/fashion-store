@@ -7,32 +7,15 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
   <!-- HEADER -->
   <header class="navbar">
     <div class="logo">FASHION</div>
-
-    <div class="search-bar">
-      < select id="categoryFilter">
-        <option value="all">All</option>
-        <option value="men">Men</option>
-        <option value="women">Women</option>
-        <option value="kids">Kids</option>
-        <option value="accessories">Accessories</option>
-      </select>
-      <input type="text" id="searchInput" placeholder="Search for fashion items..." />
-      <button id="searchBtn">🔍</button>
-    </div>
-
     <nav>
       <a href="index.html" class="active">Home</a>
       <a href="cart.html">Cart</a>
       <a href="orders.html">Orders</a>
       <a href="admin.html">Admin</a>
-      <a href="login.html">Login</a>
-      <a href="register.html">Sign Up</a>
     </nav>
-
     <button id="modeToggle" class="mode-btn">🌙 Night</button>
   </header>
 
@@ -41,48 +24,36 @@
     <img src="images/banner.jpg" alt="Fashion Banner" />
     <div class="banner-text">
       <h1>Shop the Latest Trends</h1>
-      <p>Exclusive fashion deals on clothing, shoes, and accessories!</p>
-      <a href="#products" class="shop-btn">Shop Now</a>
+      <p>Find styles for every occasion — Men, Women, and Accessories!</p>
     </div>
   </section>
 
-  <!-- PRODUCTS -->
-  <section id="products" class="products">
-    <h2>Featured Products</h2>
-    <div class="product-grid">
-
-      <div class="product-card" data-category="women" data-id="1" data-name="Summer Floral Dress" data-price="1299" data-img="images/dress.jpg">
-        <img src="images/dress.jpg" alt="Dress" />
-        <h3>Summer Floral Dress</h3>
-        <p>₹1,299</p>
-        <button class="add-cart-btn">Add to Cart</button>
+  <!-- CATEGORY SELECTION -->
+  <section class="categories">
+    <h2>Shop by Category</h2>
+    <div class="category-grid">
+      <div class="category-card" onclick="location.href='men.html'">
+        <img src="images/men.jpg" alt="Men's Wear">
+        <h3>Men's Wear</h3>
       </div>
 
-      <div class="product-card" data-category="men" data-id="2" data-name="Denim Jacket" data-price="2199" data-img="images/jacket.jpg">
-        <img src="images/jacket.jpg" alt="Jacket" />
-        <h3>Denim Jacket</h3>
-        <p>₹2,199</p>
-        <button class="add-cart-btn">Add to Cart</button>
+      <div class="category-card" onclick="location.href='women.html'">
+        <img src="images/women.jpg" alt="Women's Wear">
+        <h3>Women's Wear</h3>
       </div>
 
-      <div class="product-card" data-category="men" data-id="3" data-name="Stylish Sneakers" data-price="2499" data-img="images/shoes.jpg">
-        <img src="images/shoes.jpg" alt="Shoes" />
-        <h3>Stylish Sneakers</h3>
-        <p>₹2,499</p>
-        <button class="add-cart-btn">Add to Cart</button>
+      <div class="category-card" onclick="location.href='shoes.html'">
+        <img src="images/shoes.jpg" alt="Shoes">
+        <h3>Shoes</h3>
       </div>
 
-      <div class="product-card" data-category="accessories" data-id="4" data-name="Leather Handbag" data-price="1899" data-img="images/bag.jpg">
-        <img src="images/bag.jpg" alt="Bag" />
-        <h3>Leather Handbag</h3>
-        <p>₹1,899</p>
-        <button class="add-cart-btn">Add to Cart</button>
+      <div class="category-card" onclick="location.href='accessories.html'">
+        <img src="images/bag.jpg" alt="Accessories">
+        <h3>Accessories</h3>
       </div>
-
     </div>
   </section>
 
-  <!-- FOOTER -->
   <footer>
     <p>© 2025 FASHION | All rights reserved.</p>
   </footer>
@@ -90,4 +61,3 @@
   <script src="script.js"></script>
 </body>
 </html>
-

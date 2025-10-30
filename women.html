@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Women's Wear - FASHION</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">FASHION</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="cart.html">Cart</a>
+      <a href="orders.html">Orders</a>
+    </nav>
+  </header>
+
+  <section class="products">
+    <h2>Women's Wear</h2>
+    <div class="product-grid">
+
+      <div class="product-card" data-category="women" data-id="201" data-name="Floral Dress" data-price="1299" data-img="images/dress.jpg">
+        <img src="images/dress.jpg" alt="Dress">
+        <h3>Floral Dress</h3>
+        <p>₹1,299</p>
+        <p>Sizes: S, M, L</p>
+        <button class="add-cart-btn">Add to Cart</button>
+      </div>
+
+      <div class="product-card" data-category="women" data-id="202" data-name="Denim Skirt" data-price="999" data-img="images/skirt.jpg">
+        <img src="images/skirt.jpg" alt="Skirt">
+        <h3>Denim Skirt</h3>
+        <p>₹999</p>
+        <p>Sizes: S, M, L</p>
+        <button class="add-cart-btn">Add to Cart</button>
+      </div>
+
+      <div class="product-card" data-category="women" data-id="203" data-name="Trendy Top" data-price="899" data-img="images/top.jpg">
+        <img src="images/top.jpg" alt="Top">
+        <h3>Trendy Top</h3>
+        <p>₹899</p>
+        <p>Sizes: S, M, L, XL</p>
+        <button class="add-cart-btn">Add to Cart</button>
+      </div>
+
+    </div>
+  </section>
+
+  
+  <footer>
+    <p>© 2025 FASHION | All rights reserved.</p>
+  </footer>
+
+  <!-- Product Details Popup -->
+  <div id="productPopup" class="product-popup">
+    <div class="popup-content">
+      <span id="closePopup" class="close-btn">×</span>
+      <img id="popupImage" src="" alt="Product Image">
+      <h3 id="popupName"></h3>
+      <p id="popupPrice"></p>
+      <p id="popupSizes"></p>
+      <p id="popupDesc"></p>
+      <button id="popupAddToCart" class="add-cart-btn">Add to Cart</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

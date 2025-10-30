@@ -361,3 +361,75 @@ if (ordersContainer) {
     });
   }
 }
+// ----------------------------
+// PRODUCT DETAILS POPUP
+// ----------------------------
+const productPopup = document.getElementById('productPopup');
+const popupImage = document.getElementById('popupImage');
+const popupName = document.getElementById('popupName');
+const popupPrice = document.getElementById('popupPrice');
+const popupSizes = document.getElementById('popupSizes');
+const popupDesc = document.getElementById('popupDesc');
+const popupAddToCart = document.getElementById('popupAddToCart');
+const closePopupBtn = document.getElementById('closePopup');
+
+let currentProduct = null;
+
+// Function to open popup with product details
+function openProductPopup(product) {
+  currentProduct = product;
+  popupImage.src = product.dataset.img;
+  popupName.textContent = product.dataset.name;
+  popupPrice.textContent = "Price: ₹" + product.dataset.price;
+  popupSizes.textContent = "Sizes: " + (product.querySelector("p:nth-of-type(2)")?.textContent || "One Size");
+  popupDesc.textContent = "This is a premium quality " + product.dataset.name + " from FASHION.";
+  productPopup.style.display = 'flex';
+}
+
+// Event listeners for product cards
+document.querySelectorAll('.product-card').forEach(card => {
+  card.addEventListener('click', (e) => {
+    // Prevent "Add to Cart" button from opening popup
+    if (!e.target.classList.contains('add-cart-btn')) {
+      openProductPopup(card);
+    }
+  });
+});
+
+// Close popup
+if (closePopupBtn) {
+  closePopupBtn.addEventListener('click', () => {
+    productPopup.style.display = 'none';
+  });
+}
+
+// Add to Cart from popup
+if (popupAddToCart) {
+  popupAddToCart.addEventListener('click', () => {
+    if (currentProduct) {
+      const product = {
+        id: currentProduct.dataset.id,
+        name: currentProduct.dataset.name,
+        price: parseInt(currentProduct.dataset.price),
+        img: currentProduct.dataset.img,
+        quantity: 1
+      };
+
+      let cart = JSON.parse(localStorage.getItem('cart')) || [];
+      const existing = cart.find(item => item.id === product.id);
+      if (existing) existing.quantity++;
+      else cart.push(product);
+
+      localStorage.setItem('cart', JSON.stringify(cart));
+      alert(`${product.name} added to your cart!`);
+      productPopup.style.display = 'none';
+    }
+  });
+}
+
+// Close popup when clicking outside
+window.addEventListener('click', (e) => {
+  if (e.target === productPopup) {
+    productPopup.style.display = 'none';
+  }
+});

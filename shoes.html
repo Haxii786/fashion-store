@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shoes - FASHION</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">FASHION</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="cart.html">Cart</a>
+      <a href="orders.html">Orders</a>
+    </nav>
+  </header>
+
+  <section class="products">
+    <h2>Shoes Collection</h2>
+    <div class="product-grid">
+
+      <div class="product-card" data-category="shoes" data-id="301" data-name="Sneakers" data-price="2499" data-img="images/shoes.jpg">
+        <img src="images/shoes.jpg" alt="Sneakers">
+        <h3>Stylish Sneakers</h3>
+        <p>₹2,499</p>
+        <p>Sizes: 7, 8, 9, 10</p>
+        <button class="add-cart-btn">Add to Cart</button>
+      </div>
+
+      <div class="product-card" data-category="shoes" data-id="302" data-name="Formal Shoes" data-price="2799" data-img="images/formal-shoes.jpg">
+        <img src="images/formal-shoes.jpg" alt="Formal Shoes">
+        <h3>Formal Shoes</h3>
+        <p>₹2,799</p>
+        <p>Sizes: 6, 7, 8, 9, 10</p>
+        <button class="add-cart-btn">Add to Cart</button>
+      </div>
+
+      <div class="product-card" data-category="shoes" data-id="303" data-name="Sports Shoes" data-price="2999" data-img="images/sports-shoes.jpg">
+        <img src="images/sports-shoes.jpg" alt="Sports Shoes">
+        <h3>Sports Shoes</h3>
+        <p>₹2,999</p>
+        <p>Sizes: 6, 7, 8, 9, 10, 11</p>
+        <button class="add-cart-btn">Add to Cart</button>
+      </div>
+
+    </div>
+  </section>
+
+   <footer>
+    <p>© 2025 FASHION | All rights reserved.</p>
+  </footer>
+
+  <!-- Product Details Popup -->
+  <div id="productPopup" class="product-popup">
+    <div class="popup-content">
+      <span id="closePopup" class="close-btn">×</span>
+      <img id="popupImage" src="" alt="Product Image">
+      <h3 id="popupName"></h3>
+      <p id="popupPrice"></p>
+      <p id="popupSizes"></p>
+      <p id="popupDesc"></p>
+      <button id="popupAddToCart" class="add-cart-btn">Add to Cart</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+

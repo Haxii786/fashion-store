@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Men's Wear - FASHION</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">FASHION</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="cart.html">Cart</a>
+      <a href="orders.html">Orders</a>
+    </nav>
+  </header>
+
+  <section class="products">
+    <h2>Men's Wear</h2>
+    <div class="product-grid">
+
+      <div class="product-card" data-category="men" data-id="101" data-name="Denim Jacket" data-price="2199" data-img="images/jacket.jpg">
+        <img src="images/jacket.jpg" alt="Denim Jacket">
+        <h3>Denim Jacket</h3>
+        <p>₹2,199</p>
+        <p>Sizes: M, L, XL</p>
+        <button class="add-cart-btn">Add to Cart</button>
+      </div>
+
+      <div class="product-card" data-category="men" data-id="102" data-name="Casual T-Shirt" data-price="799" data-img="images/men-tshirt.jpg">
+        <img src="images/men-tshirt.jpg" alt="T-Shirt">
+        <h3>Casual T-Shirt</h3>
+        <p>₹799</p>
+        <p>Sizes: S, M, L</p>
+        <button class="add-cart-btn">Add to Cart</button>
+      </div>
+
+      <div class="product-card" data-category="men" data-id="103" data-name="Formal Shirt" data-price="1199" data-img="images/men-shirt.jpg">
+        <img src="images/men-shirt.jpg" alt="Shirt">
+        <h3>Formal Shirt</h3>
+        <p>₹1,199</p>
+        <p>Sizes: M, L, XL</p>
+        <button class="add-cart-btn">Add to Cart</button>
+      </div>
+
+    </div>
+  </section>
+
+    <footer>
+    <p>© 2025 FASHION | All rights reserved.</p>
+  </footer>
+
+  <!-- Product Details Popup -->
+  <div id="productPopup" class="product-popup">
+    <div class="popup-content">
+      <span id="closePopup" class="close-btn">×</span>
+      <img id="popupImage" src="" alt="Product Image">
+      <h3 id="popupName"></h3>
+      <p id="popupPrice"></p>
+      <p id="popupSizes"></p>
+      <p id="popupDesc"></p>
+      <button id="popupAddToCart" class="add-cart-btn">Add to Cart</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
