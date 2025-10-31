@@ -27,30 +27,32 @@
   </section>
 
   <!-- Checkout Popup -->
-  <div id="checkoutPopup" class="checkout-popup">
-    <div class="checkout-box">
-      <h2>Checkout</h2>
-      <form id="checkoutForm">
-        <label>Full Name</label>
-        < input type="text" id="custName" required>
+<div id="checkoutPopup" class="popup">
+  <div class="popup-content checkout-form">
+    <h2>Checkout</h2>
 
-        <label>Address</label>
-        < textarea id="custAddress" rows="3" required></textarea>
+    <form id="orderForm">
+      <label for="custName">Full Name</label>
+      <input type="text" id="custName" name="custName" required>
 
-        <label>Payment Method</label>
-        < select id="paymentMethod" required>
-          <option value="COD">Cash on Delivery</option>
-          <option value="Card">Credit / Debit Card</option>
-          <option value="UPI">UPI</option>
-        </select>
+      <label for="custAddress">Address</label>
+      <textarea id="custAddress" name="custAddress" rows="3" required></textarea>
 
-        <div class="checkout-buttons">
-          <button type="submit" class="confirm-btn">Confirm Order</button>
-          <button type="button" id="closePopup" class="cancel-btn">Cancel</button>
-        </div>
-      </form>
-    </div>
+      <label for="paymentMethod">Payment Method</label>
+      <select id="paymentMethod" name="paymentMethod" required>
+        <option value="">--Select--</option>
+        <option value="cod">Cash on Delivery</option>
+        <option value="card">Credit / Debit Card</option>
+        <option value="upi">UPI</option>
+      </select>
+
+      <div class="checkout-buttons">
+        <button type="submit" id="confirmOrderBtn" class="confirm-btn">Confirm Order</button>
+        <button type="button" id="cancelOrderBtn" class="cancel-btn">Cancel</button>
+      </div>
+    </form>
   </div>
+</div>
 
   <footer>
     <p>© 2025 FASHION | All rights reserved.</p>

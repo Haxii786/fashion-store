@@ -433,3 +433,12 @@ window.addEventListener('click', (e) => {
     productPopup.style.display = 'none';
   }
 });
+// Open Checkout Popup
+document.getElementById("checkoutBtn").addEventListener("click", () => {
+  document.getElementById("checkoutPopup").style.display = "flex";
+});
+
+// Close Popup
+document.getElementById("cancelOrderBtn").addEventListener("click", () => {
+  document.getElementById("checkoutPopup").style.display = "none";
+});
